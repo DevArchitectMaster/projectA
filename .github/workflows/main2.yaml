@@ -1,4 +1,13 @@
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tags'
+  push:
+    branches:
+      - main
+    paths:
+      - 'copyfolder/**'
 
 jobs:
     replicate-file:
