@@ -40,9 +40,10 @@ jobs:
             git config user.name github-actions
             git config user.email github-actions@github.com
             
+            git commit -am "Files Replicated from Project A"
+
             if [ "$(git push --dry-run)" = "Everything up-to-date" ];
             then
               echo "git commit"
-              git commit -am "Files Replicated from Project A"
               git push
             fi
