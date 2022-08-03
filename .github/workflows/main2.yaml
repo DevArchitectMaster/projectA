@@ -30,6 +30,7 @@ jobs:
     - name: Copy/Create file
       run: |
         FILE=./projectA/_student_version/
+        rm -rf ./projectB
         echo "Copying $FILE"
         cp -R $FILE ./projectB
 
