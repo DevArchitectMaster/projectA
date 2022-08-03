@@ -4,9 +4,10 @@ on:
       - main
     paths:
       - 'copyfolder/**'
-
-on:
   workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tags'
 
 jobs:
     replicate-file:
