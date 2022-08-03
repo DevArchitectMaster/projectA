@@ -40,13 +40,4 @@ jobs:
             git config user.name github-actions
             git config user.email github-actions@github.com
             git commit -am "Files Replicated from Project A"
-
-            git status
-            echo $?
-            echo $(git status --porcelain)
-            echo $(git diff --exit-code)
-            echo $(git diff --cached --exit-code)
-            echo $(git ls-files --other --exclude-standard --directory)
-            echo $(git ls-files --other --exclude-standard --directory | egrep -v '/$')
-
             git push
