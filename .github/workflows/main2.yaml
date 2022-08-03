@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'copyfolder/**'
   workflow_dispatch:
