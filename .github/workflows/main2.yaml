@@ -40,7 +40,7 @@ jobs:
             git config user.name github-actions
             git config user.email github-actions@github.com
             
-            echo $(git cherry -v)
+            echo git-cerry '$(git cherry -v)'
             if [ -z "$(git cherry -v)" ];
             then
               echo "git commit"
