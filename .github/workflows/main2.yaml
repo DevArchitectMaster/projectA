@@ -1,3 +1,5 @@
+name: "replicate file"
+
 on:
   push:
     branches:
