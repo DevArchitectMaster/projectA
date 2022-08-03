@@ -5,6 +5,9 @@ on:
     paths:
       - 'copyfolder/**'
 
+on:
+  workflow_dispatch:
+
 jobs:
     replicate-file:
         runs-on: ubuntu-latest
