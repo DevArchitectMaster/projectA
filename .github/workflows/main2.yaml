@@ -3,7 +3,7 @@ on:
     branches:
       - main
     paths:
-      - 'copyfolder/**'
+      - '_student_version/**'
   workflow_dispatch:
     inputs:
       tags:
@@ -29,7 +29,7 @@ jobs:
 
         - name: Copy/Create file
           run: |
-            FILE=./projectA/copyfolder/
+            FILE=./projectA/_student_version/
             echo "Copying $FILE"
             cp -R $FILE ./projectB
 
