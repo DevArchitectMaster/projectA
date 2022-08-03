@@ -40,8 +40,8 @@ jobs:
             git config user.name github-actions
             git config user.email github-actions@github.com
             
-            echo git-cerry '$(git cherry -v)'
-            if [ -z "$(git cherry -v)" ];
+            echo $(git push --dry-run)
+            if [ -z "$(git push --dry-run)" ];
             then
               echo "git commit"
               git commit -am "Files Replicated from Project A"
