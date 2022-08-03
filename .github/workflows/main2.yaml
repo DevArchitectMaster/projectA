@@ -41,7 +41,7 @@ jobs:
             git config user.email github-actions@github.com
             
             echo $(git cherry -v)
-            if [ -z $(git cherry -v) ];
+            if [ -z "$(git cherry -v)" ];
             then
               echo "git commit"
               git commit -am "Files Replicated from Project A"
