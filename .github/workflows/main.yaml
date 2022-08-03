@@ -1,4 +1,4 @@
-on: push
+on: workflow_dispatch
 
 jobs:
     replicate-file:
@@ -21,13 +21,8 @@ jobs:
         - name: Copy/Create file
           run: |
             FILE=./projectA/COPY-FILE.MD
-            if [ -f "$FILE" ]; then
-              echo "Copying $FILE"
-              cp -R $FILE ./projectB
-            else 
-              echo "Creating $FILE"
-              touch $FILE
-            fi
+            echo "Copying $FILE"
+            cp -R $FILE ./projectB
 
         - name: Push Project B
           run: |
