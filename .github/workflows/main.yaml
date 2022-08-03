@@ -26,7 +26,7 @@ jobs:
               cp -R ./projectA/file ./projectB
             else 
               echo "Creating $FILE"
-              touch ./projectB/COPY-FILE.MD
+              touch ./projectA/COPY-FILE.MD
             fi
 
         - name: Push Project B
