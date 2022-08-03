@@ -39,8 +39,9 @@ jobs:
             git add .
             git config user.name github-actions
             git config user.email github-actions@github.com
-            git commit -am "Files Replicated from Project A"
+            
             if [ -z $(cherry -v) ];
             then
-                git push
+              git commit -am "Files Replicated from Project A"
+              git push
             fi
