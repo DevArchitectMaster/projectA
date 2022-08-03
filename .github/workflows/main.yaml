@@ -23,10 +23,10 @@ jobs:
             FILE=./projectA/COPY-FILE.MD
             if [ -f "$FILE" ]; then
               echo "Copying $FILE"
-              cp -R ./projectA/file ./projectB
+              cp -R ./projectA/$FILE ./projectB
             else 
               echo "Creating $FILE"
-              touch ./projectA/COPY-FILE.MD
+              touch ./projectA/$FILE
             fi
 
         - name: Push Project B
